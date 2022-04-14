@@ -23,17 +23,73 @@ class FundCardWidget extends StatelessWidget {
                 )
               ],
             ),
+            SizedBox(height: 16),
             Row(
               children: [
-                Text(
-                  'You owe Php 718.00 overall',
-                  style: Theme.of(context).textTheme.headline6,
+                Expanded(
+                  child: cardDetails(
+                    'Total Group Spending',
+                    'Php 24,700.00',
+                    CrossAxisAlignment.start,
+                  ),
+                ),
+                SizedBox(width: 8),
+                Expanded(
+                  child: cardDetails(
+                    'Your Total Share',
+                    'Php 6,964.75',
+                    CrossAxisAlignment.end,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 8),
+            Row(
+              children: [
+                Expanded(
+                  child: cardDetails(
+                    'Cash Spent',
+                    'Php 20,723.00',
+                    CrossAxisAlignment.start,
+                  ),
+                ),
+                SizedBox(width: 8),
+                Expanded(
+                  child: cardDetails(
+                    'Amount Receivable',
+                    'Php 11,480.08',
+                    CrossAxisAlignment.end,
+                  ),
                 ),
               ],
             ),
           ],
         ),
       ),
+    );
+  }
+
+  Column cardDetails(
+      String label, String amount, CrossAxisAlignment crossAlignment) {
+    return Column(
+      crossAxisAlignment: crossAlignment,
+      children: [
+        Text(
+          label,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 12,
+          ),
+        ),
+        Text(
+          amount,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
     );
   }
 }

@@ -13,14 +13,6 @@ class ShowFundPage extends StatefulWidget {
 }
 
 class _ShowFundPageState extends State<ShowFundPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
