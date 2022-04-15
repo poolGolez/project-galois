@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_galois/app/widgets/fund/card.widget.dart';
+import 'widgets/fund/expense_list.widget.dart';
+import 'widgets/fund/card.widget.dart';
 import '../../../domain/fund/models/fund.model.dart';
 
 class ShowFundPage extends StatefulWidget {
@@ -33,6 +34,17 @@ class _ShowFundPageState extends State<ShowFundPage> {
         child: Column(
           children: <Widget>[
             FundCardWidget(fund: widget.fund),
+            Container(
+              padding: EdgeInsets.all(8),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "EXPENSES",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+            ),
+            Expanded(
+              child: ExpenseListWidget(),
+            ),
           ],
         ),
       ),

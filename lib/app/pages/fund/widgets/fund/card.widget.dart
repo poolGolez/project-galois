@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../domain/fund/models/fund.model.dart';
+import '../../../../../domain/fund/models/fund.model.dart';
 
 class FundCardWidget extends StatelessWidget {
   final Fund fund;
