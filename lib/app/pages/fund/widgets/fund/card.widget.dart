@@ -28,28 +28,8 @@ class FundCardWidget extends StatelessWidget {
               children: [
                 Expanded(
                   child: cardDetails(
-                    'Total Group Spending',
-                    'Php 24,700.00',
-                    CrossAxisAlignment.start,
-                  ),
-                ),
-                SizedBox(width: 8),
-                Expanded(
-                  child: cardDetails(
                     'Your Total Share',
                     'Php 6,964.75',
-                    CrossAxisAlignment.end,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 8),
-            Row(
-              children: [
-                Expanded(
-                  child: cardDetails(
-                    'Cash Spent',
-                    'Php 20,723.00',
                     CrossAxisAlignment.start,
                   ),
                 ),
