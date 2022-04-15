@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 
-class Fund {
+class Pool {
   String name;
 
-  Fund({@required this.name});
+  Pool({@required this.name});
 }

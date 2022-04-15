@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:project_galois/app/pages/fund/widgets/fund/balance_list.widget.dart';
-import 'widgets/fund/expense_list.widget.dart';
-import 'widgets/fund/card.widget.dart';
-import '../../../domain/fund/models/fund.model.dart';
+import 'widgets/pool/expense_list.widget.dart';
+import 'widgets/pool/card.widget.dart';
+import '../../../domain/pool/models/pool.model.dart';
 
-class ShowFundPage extends StatefulWidget {
+class ShowPoolPage extends StatefulWidget {
   final String title;
-  final Fund fund;
+  final Pool pool;
 
-  ShowFundPage({Key key, this.title, @required this.fund}) : super(key: key);
+  ShowPoolPage({Key key, this.title, @required this.pool}) : super(key: key);
 
   @override
-  _ShowFundPageState createState() => _ShowFundPageState();
+  _ShowPoolPageState createState() => _ShowPoolPageState();
 }
 
-class _ShowFundPageState extends State<ShowFundPage> {
+class _ShowPoolPageState extends State<ShowPoolPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Fund",
+          "Pool",
           style: TextStyle(
             color: Colors.black,
             fontSize: 18,
@@ -34,7 +33,7 @@ class _ShowFundPageState extends State<ShowFundPage> {
         margin: EdgeInsets.fromLTRB(8, 8, 8, 0),
         child: Column(
           children: <Widget>[
-            FundCardWidget(fund: widget.fund),
+            PoolCardWidget(pool: widget.pool),
             Container(
               padding: EdgeInsets.all(8),
               alignment: Alignment.centerLeft,
@@ -44,7 +43,7 @@ class _ShowFundPageState extends State<ShowFundPage> {
               ),
             ),
             Expanded(
-              child: BalancesListWidget(),
+              child: ExpenseListWidget(),
             ),
           ],
         ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './domain/fund/models/fund.model.dart';
-import './app/pages/fund/show.page.dart';
+import 'domain/pool/models/pool.model.dart';
+import './app/pages/pool/show.page.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,9 +23,9 @@ class MyApp extends StatelessWidget {
               ),
         ),
       ),
-      home: ShowFundPage(
+      home: ShowPoolPage(
         title: 'Flutter Demo Home Page',
-        fund: Fund(name: "Bantayan Escapade"),
+        pool: Pool(name: "Bantayan Escapade"),
       ),
     );
   }

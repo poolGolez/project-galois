@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../../../../domain/fund/models/fund.model.dart';
+import '../../../../../domain/pool/models/pool.model.dart';
 
-class FundCardWidget extends StatelessWidget {
-  final Fund fund;
+class PoolCardWidget extends StatelessWidget {
+  final Pool pool;
 
-  const FundCardWidget({@required this.fund});
+  const PoolCardWidget({@required this.pool});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class FundCardWidget extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  fund.name,
+                  pool.name,
                   style: Theme.of(context).textTheme.headline1,
                 )
               ],
